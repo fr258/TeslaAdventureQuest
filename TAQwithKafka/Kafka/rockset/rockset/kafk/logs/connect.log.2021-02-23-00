@@ -1,0 +1,1 @@
+[2021-02-23 00:16:47,589] INFO WorkerSinkTask{id=QuestIntegration-0} Committing offsets asynchronously using sequence number 698: {questTopic-0=OffsetAndMetadata{offset=35, leaderEpoch=null, metadata=''}} (org.apache.kafka.connect.runtime.WorkerSinkTask:352)

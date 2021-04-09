@@ -1,0 +1,1 @@
+[2021-02-20 23:00:55,113] INFO WorkerSinkTask{id=test7-0} Committing offsets asynchronously using sequence number 180: {test2-0=OffsetAndMetadata{offset=17, leaderEpoch=null, metadata=''}} (org.apache.kafka.connect.runtime.WorkerSinkTask:352)

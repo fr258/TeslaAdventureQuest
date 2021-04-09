@@ -1,0 +1,2445 @@
+[2021-02-22 17:24:54,728] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:69)
+[2021-02-22 17:24:54,769] INFO WorkerInfo values: 
+	jvm.args = -Xms256M, -Xmx2G, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -XX:MaxInlineLevel=15, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../logs, -Dlog4j.configuration=file:./kafka_2.13-2.7.0/bin/../config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 1.8.0_281, 25.281-b09
+	jvm.classpath = /home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/activation-1.1.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/aopalliance-repackaged-2.6.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/argparse4j-0.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/audience-annotations-0.5.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/commons-cli-1.4.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/commons-lang3-3.8.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-api-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-basic-auth-extension-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-file-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-json-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-mirror-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-mirror-client-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-runtime-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/connect-transforms-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/hk2-api-2.6.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/hk2-locator-2.6.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/hk2-utils-2.6.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-annotations-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-core-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-databind-2.10.5.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-dataformat-csv-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-datatype-jdk8-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-jaxrs-base-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-jaxrs-json-provider-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-module-jaxb-annotations-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-module-paranamer-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jackson-module-scala_2.13-2.10.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.activation-api-1.2.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.annotation-api-1.3.5.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.inject-2.6.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.validation-api-2.0.2.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.ws.rs-api-2.1.6.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jakarta.xml.bind-api-2.3.2.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/javassist-3.25.0-GA.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/javassist-3.26.0-GA.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/javax.servlet-api-3.1.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/javax.ws.rs-api-2.1.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jaxb-api-2.3.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-client-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-common-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-container-servlet-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-container-servlet-core-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-hk2-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-media-jaxb-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jersey-server-2.31.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-client-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-continuation-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-http-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-io-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-security-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-server-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-servlet-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-servlets-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jetty-util-9.4.33.v20201020.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/jopt-simple-5.0.4.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka_2.13-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka_2.13-2.7.0-sources.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-clients-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-log4j-appender-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-raft-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-streams-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-streams-examples-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-streams-scala_2.13-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-streams-test-utils-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/kafka-tools-2.7.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/log4j-1.2.17.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/lz4-java-1.7.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/maven-artifact-3.6.3.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/metrics-core-2.2.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-buffer-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-codec-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-common-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-handler-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-resolver-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-transport-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-transport-native-epoll-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/netty-transport-native-unix-common-4.1.51.Final.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/org:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/osgi-resource-locator-1.0.3.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/paranamer-2.8.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/plexus-utils-3.2.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/reflections-0.9.12.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/rocksdbjni-5.18.4.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/scala-collection-compat_2.13-2.2.0.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/scala-java8-compat_2.13-0.9.1.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/scala-library-2.13.3.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/scala-logging_2.13-3.9.2.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/scala-reflect-2.13.3.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/slf4j-api-1.7.30.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/slf4j-log4j12-1.7.30.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/snappy-java-1.1.7.7.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/zookeeper-3.5.8.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/zookeeper-jute-3.5.8.jar:/home/farrah/Downloads/rocksters/kafka_2.13-2.7.0/bin/../libs/zstd-jni-1.4.5-6.jar
+	os.spec = Linux, amd64, 4.4.0-103-generic
+	os.vcpus = 8
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2021-02-22 17:24:54,776] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.ConnectStandalone:78)
+[2021-02-22 17:24:54,899] INFO Loading plugin from: /home/farrah/Downloads/rocksters/kafka-connect-rockset-1.2.0-jar-with-dependencies.jar (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:246)
+[2021-02-22 17:25:01,492] INFO Registered loader: PluginClassLoader{pluginLocation=file:/home/farrah/Downloads/rocksters/kafka-connect-rockset-1.2.0-jar-with-dependencies.jar} (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:269)
+[2021-02-22 17:25:01,495] INFO Added plugin 'rockset.RocksetSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:01,496] INFO Added plugin 'io.confluent.connect.avro.AvroConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:01,497] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:01,498] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:01,498] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:01,499] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,715] INFO Registered loader: sun.misc.Launcher$AppClassLoader@764c12b6 (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:269)
+[2021-02-22 17:25:06,716] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,717] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,718] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,718] INFO Added plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,725] INFO Added plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,726] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,726] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,727] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,727] INFO Added plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,728] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,729] INFO Added plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,730] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,730] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,731] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,732] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,732] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,733] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,733] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,734] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,735] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,736] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,736] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,737] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,737] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,738] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,739] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,739] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,740] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,741] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,741] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,742] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,742] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,743] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,743] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,744] INFO Added plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,745] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,745] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,746] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,747] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,748] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,748] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,749] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,750] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,751] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,751] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,752] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,753] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-02-22 17:25:06,757] INFO Added aliases 'FileStreamSinkConnector' and 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,757] INFO Added aliases 'FileStreamSourceConnector' and 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,758] INFO Added aliases 'MirrorCheckpointConnector' and 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,759] INFO Added aliases 'MirrorHeartbeatConnector' and 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,760] INFO Added aliases 'MirrorSourceConnector' and 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,761] INFO Added aliases 'MockConnector' and 'Mock' to plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,762] INFO Added aliases 'MockSinkConnector' and 'MockSink' to plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,763] INFO Added aliases 'MockSourceConnector' and 'MockSource' to plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,764] INFO Added aliases 'SchemaSourceConnector' and 'SchemaSource' to plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,764] INFO Added aliases 'VerifiableSinkConnector' and 'VerifiableSink' to plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,765] INFO Added aliases 'VerifiableSourceConnector' and 'VerifiableSource' to plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,766] INFO Added aliases 'RocksetSinkConnector' and 'RocksetSink' to plugin 'rockset.RocksetSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,767] INFO Added aliases 'AvroConverter' and 'Avro' to plugin 'io.confluent.connect.avro.AvroConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,767] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,768] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,768] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,769] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,770] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,771] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,771] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,772] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,773] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,773] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,774] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,775] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,775] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,776] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,776] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,777] INFO Added alias 'SimpleHeaderConverter' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,777] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,779] INFO Added aliases 'PredicatedTransformation' and 'Predicated' to plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,780] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,782] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,783] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,783] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,784] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,784] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,785] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,785] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-02-22 17:25:06,786] INFO Added aliases 'AllConnectorClientConfigOverridePolicy' and 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,786] INFO Added aliases 'NoneConnectorClientConfigOverridePolicy' and 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,787] INFO Added aliases 'PrincipalConnectorClientConfigOverridePolicy' and 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:430)
+[2021-02-22 17:25:06,881] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = None
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	internal.key.converter = class org.apache.kafka.connect.json.JsonConverter
+	internal.value.converter = class org.apache.kafka.connect.json.JsonConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = null
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = /tmp/connect.offsets
+	plugin.path = [kafka-connect-rockset-1.2.0-jar-with-dependencies.jar]
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	rest.host.name = null
+	rest.port = 8083
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:361)
+[2021-02-22 17:25:06,882] INFO Worker configuration property 'internal.key.converter' is deprecated and may be removed in an upcoming release. The specified value 'org.apache.kafka.connect.json.JsonConverter' matches the default, so this property can be safely removed from the worker configuration. (org.apache.kafka.connect.runtime.WorkerConfig:389)
+[2021-02-22 17:25:06,883] INFO Worker configuration property 'internal.key.converter.schemas.enable' (along with all configuration for 'internal.key.converter') is deprecated and may be removed in an upcoming release. The specified value 'false' matches the default, so this property can be safely removed from the worker configuration. (org.apache.kafka.connect.runtime.WorkerConfig:389)
+[2021-02-22 17:25:06,884] INFO Worker configuration property 'internal.value.converter' is deprecated and may be removed in an upcoming release. The specified value 'org.apache.kafka.connect.json.JsonConverter' matches the default, so this property can be safely removed from the worker configuration. (org.apache.kafka.connect.runtime.WorkerConfig:389)
+[2021-02-22 17:25:06,884] INFO Worker configuration property 'internal.value.converter.schemas.enable' (along with all configuration for 'internal.value.converter') is deprecated and may be removed in an upcoming release. The specified value 'false' matches the default, so this property can be safely removed from the worker configuration. (org.apache.kafka.connect.runtime.WorkerConfig:389)
+[2021-02-22 17:25:06,888] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2021-02-22 17:25:06,906] INFO AdminClientConfig values: 
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retries = 2147483647
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:361)
+[2021-02-22 17:25:09,953] INFO Successfully logged in. (org.apache.kafka.common.security.authenticator.AbstractLogin:61)
+[2021-02-22 17:25:10,968] WARN The configuration 'producer.sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,969] WARN The configuration 'consumer.ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,970] WARN The configuration 'producer.request.timeout.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,970] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,970] WARN The configuration 'consumer.sasl.mechanism' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,971] WARN The configuration 'internal.key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,971] WARN The configuration 'producer.retry.backoff.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,972] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,973] WARN The configuration 'sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,973] WARN The configuration 'consumer.security.protocol' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,974] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,974] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,975] WARN The configuration 'ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,976] WARN The configuration 'consumer.sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,976] WARN The configuration 'producer.security.protocol' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,977] WARN The configuration 'consumer.request.timeout.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,978] WARN The configuration 'consumer.retry.backoff.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,978] WARN The configuration 'producer.sasl.mechanism' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,979] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,980] WARN The configuration 'internal.key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,981] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,981] WARN The configuration 'internal.value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,982] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,982] WARN The configuration 'internal.value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,983] WARN The configuration 'producer.ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:10,986] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:10,987] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:10,988] INFO Kafka startTimeMs: 1614032710984 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:17,489] INFO Kafka cluster ID: lkc-863j0 (org.apache.kafka.connect.util.ConnectUtils:65)
+[2021-02-22 17:25:17,493] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2021-02-22 17:25:17,539] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:668)
+[2021-02-22 17:25:17,540] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:672)
+[2021-02-22 17:25:17,541] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:678)
+[2021-02-22 17:25:17,601] INFO Logging initialized @24875ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log:169)
+[2021-02-22 17:25:17,842] INFO Added connector for http://:8083 (org.apache.kafka.connect.runtime.rest.RestServer:132)
+[2021-02-22 17:25:17,844] INFO Initializing REST server (org.apache.kafka.connect.runtime.rest.RestServer:204)
+[2021-02-22 17:25:17,879] INFO jetty-9.4.33.v20201020; built: 2020-10-20T23:39:24.803Z; git: 1be68755656cef678b79a2ef1c2ebbca99e25420; jvm 1.8.0_281-b09 (org.eclipse.jetty.server.Server:375)
+[2021-02-22 17:25:18,009] INFO Started http_8083@497570fb{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:331)
+[2021-02-22 17:25:18,011] INFO Started @25286ms (org.eclipse.jetty.server.Server:415)
+[2021-02-22 17:25:18,112] INFO Advertised URI: http://127.0.1.1:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-02-22 17:25:18,113] INFO REST server listening at http://127.0.1.1:8083/, advertising URL http://127.0.1.1:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:219)
+[2021-02-22 17:25:18,113] INFO Advertised URI: http://127.0.1.1:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-02-22 17:25:18,114] INFO REST admin endpoints at http://127.0.1.1:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:220)
+[2021-02-22 17:25:18,115] INFO Advertised URI: http://127.0.1.1:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-02-22 17:25:18,116] INFO Setting up None Policy for ConnectorClientConfigOverride. This will disallow any client configuration to be overridden (org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy:45)
+[2021-02-22 17:25:18,157] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2021-02-22 17:25:18,160] INFO AdminClientConfig values: 
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retries = 2147483647
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:361)
+[2021-02-22 17:25:18,166] INFO Successfully logged in. (org.apache.kafka.common.security.authenticator.AbstractLogin:61)
+[2021-02-22 17:25:18,188] WARN The configuration 'producer.sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,189] WARN The configuration 'consumer.ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,189] WARN The configuration 'producer.request.timeout.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,190] WARN The configuration 'plugin.path' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,190] WARN The configuration 'consumer.sasl.mechanism' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,191] WARN The configuration 'internal.key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,191] WARN The configuration 'producer.retry.backoff.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,191] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,192] WARN The configuration 'sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,192] WARN The configuration 'consumer.security.protocol' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,193] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,194] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,194] WARN The configuration 'ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,195] WARN The configuration 'consumer.sasl.jaas.config' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,195] WARN The configuration 'producer.security.protocol' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,196] WARN The configuration 'consumer.request.timeout.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,196] WARN The configuration 'consumer.retry.backoff.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,197] WARN The configuration 'producer.sasl.mechanism' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,197] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,198] WARN The configuration 'internal.key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,198] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,199] WARN The configuration 'internal.value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,199] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,200] WARN The configuration 'internal.value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,200] WARN The configuration 'producer.ssl.endpoint.identification.algorithm' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:369)
+[2021-02-22 17:25:18,201] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:18,201] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:18,202] INFO Kafka startTimeMs: 1614032718200 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:21,696] INFO Kafka cluster ID: lkc-863j0 (org.apache.kafka.connect.util.ConnectUtils:65)
+[2021-02-22 17:25:21,699] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2021-02-22 17:25:21,719] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:668)
+[2021-02-22 17:25:21,720] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:672)
+[2021-02-22 17:25:21,721] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:678)
+[2021-02-22 17:25:21,739] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:21,740] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:21,741] INFO Kafka startTimeMs: 1614032721738 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:22,438] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-02-22 17:25:22,444] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-02-22 17:25:22,483] INFO Kafka Connect standalone worker initialization took 27743ms (org.apache.kafka.connect.cli.ConnectStandalone:100)
+[2021-02-22 17:25:22,483] INFO Kafka Connect starting (org.apache.kafka.connect.runtime.Connect:51)
+[2021-02-22 17:25:22,488] INFO Herder starting (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:94)
+[2021-02-22 17:25:22,489] INFO Worker starting (org.apache.kafka.connect.runtime.Worker:195)
+[2021-02-22 17:25:22,491] INFO Starting FileOffsetBackingStore with file /tmp/connect.offsets (org.apache.kafka.connect.storage.FileOffsetBackingStore:58)
+[2021-02-22 17:25:22,503] INFO Worker started (org.apache.kafka.connect.runtime.Worker:202)
+[2021-02-22 17:25:22,503] INFO Herder started (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:97)
+[2021-02-22 17:25:22,504] INFO Initializing REST resources (org.apache.kafka.connect.runtime.rest.RestServer:224)
+[2021-02-22 17:25:22,689] INFO Adding admin resources to main listener (org.apache.kafka.connect.runtime.rest.RestServer:241)
+[2021-02-22 17:25:23,044] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session:334)
+[2021-02-22 17:25:23,044] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session:339)
+[2021-02-22 17:25:23,051] INFO node0 Scavenging every 660000ms (org.eclipse.jetty.server.session:132)
+[2021-02-22 17:25:25,332] INFO Started o.e.j.s.ServletContextHandler@7c4fc2bf{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler:916)
+[2021-02-22 17:25:25,333] INFO REST resources initialized; server is started and ready to handle requests (org.apache.kafka.connect.runtime.rest.RestServer:319)
+[2021-02-22 17:25:25,333] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect:57)
+[2021-02-22 17:25:25,411] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:361)
+[2021-02-22 17:25:25,463] INFO Creating connector QuestIntegration of type rockset.RocksetSinkConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2021-02-22 17:25:25,467] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:25,469] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,489] INFO Instantiated connector QuestIntegration with version 1.0 of type class rockset.RocksetSinkConnector (org.apache.kafka.connect.runtime.Worker:284)
+[2021-02-22 17:25:25,492] INFO Finished creating connector QuestIntegration (org.apache.kafka.connect.runtime.Worker:310)
+[2021-02-22 17:25:25,497] INFO Starting RocksetSinkConnector (rockset.RocksetSinkConnector:22)
+[2021-02-22 17:25:25,501] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:25,502] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:25,509] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:25,511] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,520] INFO Creating task QuestIntegration-0 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:25,530] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:25,532] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,537] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:25,539] INFO Instantiated task QuestIntegration-0 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:25,544] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,545] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,545] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-0 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:25,546] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-0 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:25,547] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-0 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:25,567] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:25,569] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:25,571] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,621] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:25,664] INFO Successfully logged in. (org.apache.kafka.common.security.authenticator.AbstractLogin:61)
+[2021-02-22 17:25:25,825] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:25,826] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:25,827] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:25,827] INFO Kafka startTimeMs: 1614032725826 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:25,870] INFO Creating task QuestIntegration-1 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:25,873] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:25,875] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,876] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:25,876] INFO Instantiated task QuestIntegration-1 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:25,877] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,878] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,879] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-1 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:25,879] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-1 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:25,881] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-1 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:25,882] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:25,887] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:25,888] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:25,890] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:25,890] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:25,892] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,898] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:25,940] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:25,941] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:25,942] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:25,942] INFO Kafka startTimeMs: 1614032725941 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:25,953] INFO Creating task QuestIntegration-2 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:25,956] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:25,966] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:25,966] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:25,968] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:25,976] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,978] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:25,979] INFO Instantiated task QuestIntegration-2 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:25,980] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,981] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:25,982] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-2 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:25,982] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-2 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:25,983] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-2 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:25,991] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:25,994] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:25,995] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:25,998] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,030] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,031] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,031] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,032] INFO Kafka startTimeMs: 1614032726031 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,043] INFO Creating task QuestIntegration-3 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,046] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,050] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,051] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,052] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,052] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,057] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,060] INFO Instantiated task QuestIntegration-3 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,061] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,062] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,062] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-3 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,063] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-3 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,064] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-3 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,073] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,082] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,084] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,088] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,118] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,119] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,119] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,120] INFO Kafka startTimeMs: 1614032726118 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,131] INFO Creating task QuestIntegration-4 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,134] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,137] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,146] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,147] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,150] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,157] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,158] INFO Instantiated task QuestIntegration-4 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,159] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,160] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,160] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-4 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,161] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-4 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,161] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-4 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,166] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,167] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,169] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,171] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,202] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,204] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,204] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,205] INFO Kafka startTimeMs: 1614032726203 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,220] INFO Creating task QuestIntegration-5 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,222] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,225] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,227] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,228] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,231] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,231] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,232] INFO Instantiated task QuestIntegration-5 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,234] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,235] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,236] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-5 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,237] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-5 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,238] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-5 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,243] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,245] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,247] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,250] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-5
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,278] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,279] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,280] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,280] INFO Kafka startTimeMs: 1614032726279 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,291] INFO Creating task QuestIntegration-6 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,295] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,299] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,301] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,302] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,302] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,304] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,307] INFO Instantiated task QuestIntegration-6 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,308] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,309] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,310] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-6 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,310] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-6 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,311] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-6 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,317] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,324] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,327] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,330] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-6
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,362] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,363] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,364] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,365] INFO Kafka startTimeMs: 1614032726363 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,377] INFO Creating task QuestIntegration-7 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,382] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,385] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,388] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,388] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,389] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,392] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,393] INFO Instantiated task QuestIntegration-7 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,394] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,396] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,397] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-7 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,397] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-7 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,398] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-7 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,405] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,410] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,412] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,414] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-7
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,441] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,443] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,443] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,444] INFO Kafka startTimeMs: 1614032726443 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,514] INFO Creating task QuestIntegration-8 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,520] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,521] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,527] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,528] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,530] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,531] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,532] INFO Instantiated task QuestIntegration-8 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,533] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,534] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,535] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-8 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,535] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-8 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,536] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-8 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,541] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,543] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,545] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,548] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-8
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,581] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,583] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,583] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,584] INFO Kafka startTimeMs: 1614032726583 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,598] INFO Creating task QuestIntegration-9 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-02-22 17:25:26,601] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-02-22 17:25:26,599] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,605] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,605] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,611] INFO TaskConfig values: 
+	task.class = class rockset.RocksetSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-02-22 17:25:26,612] INFO Instantiated task QuestIntegration-9 with version 0.0.0.0 of type rockset.RocksetSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-02-22 17:25:26,613] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,614] INFO StringConverterConfig values: 
+	converter.encoding = UTF8
+	converter.type = value
+ (org.apache.kafka.connect.storage.StringConverterConfig:361)
+[2021-02-22 17:25:26,615] INFO Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-9 using the connector config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-02-22 17:25:26,615] INFO Set up the value converter class org.apache.kafka.connect.storage.StringConverter for task QuestIntegration-9 using the connector config (org.apache.kafka.connect.runtime.Worker:545)
+[2021-02-22 17:25:26,616] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task QuestIntegration-9 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-02-22 17:25:26,611] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,622] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-02-22 17:25:26,623] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-02-22 17:25:26,625] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = rockset.RocksetSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = QuestIntegration
+	predicates = []
+	tasks.max = 10
+	topics = [questTopic]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.storage.StringConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-02-22 17:25:26,628] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [pkc-ep9mm.us-east-2.aws.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-QuestIntegration-9
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-QuestIntegration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 20000
+	retry.backoff.ms = 500
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = PLAIN
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-02-22 17:25:26,666] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-02-22 17:25:26,667] INFO Kafka version: 2.7.0 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-02-22 17:25:26,668] INFO Kafka commitId: 448719dc99a19793 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-02-22 17:25:26,668] INFO Kafka startTimeMs: 1614032726667 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-02-22 17:25:26,685] INFO Created connector QuestIntegration (org.apache.kafka.connect.cli.ConnectStandalone:112)
+[2021-02-22 17:25:26,689] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Subscribed to topic(s): questTopic (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-02-22 17:25:26,692] INFO RocksetConnectorConfig values: 
+	format = JSON
+	rockset.apikey = null
+	rockset.apiserver.url = https://api.rs2.usw2.rockset.com
+	rockset.collection = null
+	rockset.integration.key = kafka://xV0V5hVoYDe7fdlgfDM3gkmbWNTj4BRh1Xx5wGaHKKQ4Sm1d1WAdIqFmx93vbi79@api.rs2.usw2.rockset.com
+	rockset.task.threads = 5
+	rockset.workspace = commons
+ (rockset.RocksetConnectorConfig:361)
+[2021-02-22 17:25:26,692] INFO Building Rockset connector config. Apiserver: https://api.rs2.usw2.rockset.comNumber of Threads: 5, Format: JSON (rockset.RocksetConnectorConfig:30)
+[2021-02-22 17:25:26,769] INFO WorkerSinkTask{id=QuestIntegration-0} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,771] INFO WorkerSinkTask{id=QuestIntegration-8} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,772] INFO WorkerSinkTask{id=QuestIntegration-7} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,772] INFO WorkerSinkTask{id=QuestIntegration-1} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,772] INFO WorkerSinkTask{id=QuestIntegration-4} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,771] INFO WorkerSinkTask{id=QuestIntegration-3} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,773] INFO WorkerSinkTask{id=QuestIntegration-9} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,772] INFO WorkerSinkTask{id=QuestIntegration-6} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,772] INFO WorkerSinkTask{id=QuestIntegration-2} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:26,771] INFO WorkerSinkTask{id=QuestIntegration-5} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-02-22 17:25:27,491] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,491] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,497] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,497] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,509] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,512] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,593] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,595] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,634] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,637] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,636] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,648] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,651] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,664] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,673] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,753] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,770] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,772] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,778] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,810] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,830] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:27,832] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:27,835] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:27,858] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,006] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:28,023] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:28,031] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,190] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Cluster ID: lkc-863j0 (org.apache.kafka.clients.Metadata:279)
+[2021-02-22 17:25:28,252] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Discovered group coordinator b0-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-02-22 17:25:28,257] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,356] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,456] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=8, memberId='connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:28,468] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Finished assignment for group at generation 8: {connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87=Assignment(partitions=[questTopic-0, questTopic-1])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:626)
+[2021-02-22 17:25:28,508] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,538] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,543] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=8, memberId='connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:28,546] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[questTopic-0, questTopic-1]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:28,559] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Adding newly assigned partitions: questTopic-0, questTopic-1 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:28,563] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,719] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,731] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Setting offset for partition questTopic-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b5-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 5 rack: 2)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-02-22 17:25:28,732] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Setting offset for partition questTopic-1 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b1-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 1 rack: 1)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-02-22 17:25:28,744] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,752] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,762] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,854] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:28,991] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:31,500] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Attempt to heartbeat failed since group is rebalancing (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:1110)
+[2021-02-22 17:25:31,503] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Revoke previously assigned partitions questTopic-0, questTopic-1 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:307)
+[2021-02-22 17:25:31,505] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-02-22 17:25:31,549] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-3-a0b5a2e2-2af6-485a-95a1-521f4146b817', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,549] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-9-5534d5b8-f285-476f-a1b6-997a943945a6', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,549] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-4-dacef664-3f66-4000-8bd8-1def7ba64881', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,557] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-7-a2414a0c-6e0c-452b-aeaf-e392d5a8c8e1', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,563] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-5-9c23b946-b923-4e2f-9224-5b47452e3c27', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,569] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-8-af383359-7b13-4ee0-a179-5c430f76df00', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,563] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,562] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-0-015b0d00-1bb3-4ddd-8e80-eedfaffccffc', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,587] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Finished assignment for group at generation 9: {connector-consumer-QuestIntegration-8-af383359-7b13-4ee0-a179-5c430f76df00=Assignment(partitions=[]), connector-consumer-QuestIntegration-3-a0b5a2e2-2af6-485a-95a1-521f4146b817=Assignment(partitions=[]), connector-consumer-QuestIntegration-2-75e19e4d-57bf-4de0-bc8d-18e5d3c4c497=Assignment(partitions=[]), connector-consumer-QuestIntegration-4-dacef664-3f66-4000-8bd8-1def7ba64881=Assignment(partitions=[]), connector-consumer-QuestIntegration-9-5534d5b8-f285-476f-a1b6-997a943945a6=Assignment(partitions=[]), connector-consumer-QuestIntegration-0-015b0d00-1bb3-4ddd-8e80-eedfaffccffc=Assignment(partitions=[questTopic-0]), connector-consumer-QuestIntegration-5-9c23b946-b923-4e2f-9224-5b47452e3c27=Assignment(partitions=[]), connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87=Assignment(partitions=[]), connector-consumer-QuestIntegration-7-a2414a0c-6e0c-452b-aeaf-e392d5a8c8e1=Assignment(partitions=[]), connector-consumer-QuestIntegration-1-c486e1ef-0ffe-40a2-bd27-887241871914=Assignment(partitions=[questTopic-1])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:626)
+[2021-02-22 17:25:31,596] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-2-75e19e4d-57bf-4de0-bc8d-18e5d3c4c497', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,596] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Successfully joined group with generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-1-c486e1ef-0ffe-40a2-bd27-887241871914', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-02-22 17:25:31,685] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-9-5534d5b8-f285-476f-a1b6-997a943945a6', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,685] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-8-af383359-7b13-4ee0-a179-5c430f76df00', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,685] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-3-a0b5a2e2-2af6-485a-95a1-521f4146b817', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,685] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-4-dacef664-3f66-4000-8bd8-1def7ba64881', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,689] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,688] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,687] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,690] INFO [Consumer clientId=connector-consumer-QuestIntegration-8, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,690] INFO [Consumer clientId=connector-consumer-QuestIntegration-3, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,690] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,691] INFO [Consumer clientId=connector-consumer-QuestIntegration-9, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,693] INFO [Consumer clientId=connector-consumer-QuestIntegration-4, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,763] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-6-b9c30afb-cada-4ce5-b89b-129f1639ba87', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,764] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-7-a2414a0c-6e0c-452b-aeaf-e392d5a8c8e1', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,765] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,765] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,765] INFO [Consumer clientId=connector-consumer-QuestIntegration-6, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,766] INFO [Consumer clientId=connector-consumer-QuestIntegration-7, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,767] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-2-75e19e4d-57bf-4de0-bc8d-18e5d3c4c497', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,768] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-1-c486e1ef-0ffe-40a2-bd27-887241871914', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,769] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,769] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[questTopic-1]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,769] INFO [Consumer clientId=connector-consumer-QuestIntegration-2, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,770] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-0-015b0d00-1bb3-4ddd-8e80-eedfaffccffc', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,770] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Adding newly assigned partitions: questTopic-1 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,771] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Successfully synced group in generation Generation{generationId=9, memberId='connector-consumer-QuestIntegration-5-9c23b946-b923-4e2f-9224-5b47452e3c27', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-02-22 17:25:31,772] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[questTopic-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,773] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Notifying assignor about the new Assignment(partitions=[]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-02-22 17:25:31,773] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Adding newly assigned partitions: questTopic-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,774] INFO [Consumer clientId=connector-consumer-QuestIntegration-5, groupId=connect-QuestIntegration] Adding newly assigned partitions:  (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-02-22 17:25:31,812] INFO [Consumer clientId=connector-consumer-QuestIntegration-1, groupId=connect-QuestIntegration] Setting offset for partition questTopic-1 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b1-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 1 rack: 1)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-02-22 17:25:31,817] INFO [Consumer clientId=connector-consumer-QuestIntegration-0, groupId=connect-QuestIntegration] Setting offset for partition questTopic-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b5-pkc-ep9mm.us-east-2.aws.confluent.cloud:9092 (id: 5 rack: 2)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-02-22 17:34:46,007] INFO WorkerSinkTask{id=QuestIntegration-1} Committing offsets asynchronously using sequence number 56: {questTopic-1=OffsetAndMetadata{offset=4, leaderEpoch=null, metadata=''}} (org.apache.kafka.connect.runtime.WorkerSinkTask:352)
